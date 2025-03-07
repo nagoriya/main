@@ -3,74 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Blog Website</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="javascript.js" defer></script>
 </head>
 <body>
-    <div class="heading">
-        <div>
-            <h2 class="heading1">English Spoken With Vinod Sir</h2>
-            <HR></HR>
-        </div>
-    </div>
-    <div class="navbar">
-        <div class="logo">
-        <img class="logo1" src="images/logo_1.jpg" alt="logo" width="40" height="40">
-                <div>Home</div>
-                <div>About Us</div>
-                <div class="icon">
-                    <input type="Search box" placeholder=" Search Item">
-                    <i class="fa-solid fa-magnifying-glass"  ></i>
-                </div>
-                <div>Contact Us</div>
-                <div>Gallary</div>
-                <div>SignIn & SignUp</div>
-                <div>Profile</div>
-         </div>        
-        </div>
-    </div> 
-    <div class="row1">
-        <DIV>Course</DIV>
-        <DIV>Book Demo</DIV>
-        <DIV>Fees</DIV>
-        <DIV>Study Material</DIV>
-        <DIV>About Nill</DIV>
-    </div>
-    <div class="row2"></div>  
-    <div class="carousel">
-        <div class="image-container">
-            <img src="images/bg18.jpg" width="180" height="250" alt="image" class="moving-image" alt="Animated Image">
-            <img src="images/bg11.jpg" width="180" height="250" alt="image" class="moving-image" alt="Animated Image">
-            <img src="images/bg19.jpg" width="180" height="250" alt="image" class="moving-image" alt="Animated Image">
-            <img src="images/bg13.jpg" width="180" height="250" alt="image" class="moving-image" alt="Animated Image">
-            <img src="images/bg14.jpg" width="180" height="250" alt="image" class="moving-image" alt="Animated Image">
-            <img src="images/bg17.jpg" width="180" height="250" alt="image" class="moving-image" alt="Animated Image">
-            <img src="images/bg20.jpg" width="180" height="250" alt="image" class="moving-image" alt="Animated Image">
-            <img src="images/bg21.jpg" width="180" height="250" alt="image" class="moving-image" alt="Animated Image">
-            <img src="images/bg22.jpg" width="180" height="250" alt="image" class="moving-image" alt="Animated Image">
-            <img src="images/bg23.jpg" width="180" height="250" alt="image" class="moving-image" alt="Animated Image">
-            <img src="images/bg12.jpg" width="180" height="250" alt="image" class="moving-image" alt="Animated Image">
-            <img src="images/bg25.jpg" width="180" height="250" alt="image" class="moving-image" alt="Animated Image">
-            <img src="images/bg26.jpg" width="180" height="250" alt="image" class="moving-image" alt="Animated Image">
-            <img src="images/bg23.jpg" width="180" height="250" alt="image" class="moving-image" alt="Animated Image">
 
-        </div>
-    </div>
-    <div>
-        <img src="images/bg16.jpeg" class="moving-image" alt="Animated Image">
-        <img src="images/bg16.jpeg" class="moving-image" alt="Animated Image">
-        <img src="images/bg16.jpeg" class="moving-image" alt="Animated Image">
-        <img src="images/bg16.jpeg" class="moving-image" alt="Animated Image">
-        <img src="images/bg16.jpeg" class="moving-image" alt="Animated Image">
-        <img src="images/bg16.jpeg" class="moving-image" alt="Animated Image">
-        <img src="images/bg16.jpeg" class="moving-image" alt="Animated Image">
-        <img src="images/bg16.jpeg" class="moving-image" alt="Animated Image">
-        <img src="https://nationalinstituteoflanguage.in/wp-content/uploads/2024/06/90K-Students-2-1-1.png" class="moving-image" alt="Animated Image">
-    </div>
-    <div>
-        <h1 class="typing-text">Hello, I am a Web Developer!</h1>
+    <!-- Navbar -->
+    <header>
+        <div class="logo">MyBlogs!</div>
+        <nav>
+            <ul class="nav-links">
+                <input type="text" id="search-bar" placeholder="Search blog...">
+                <button type="Secarh">Search</button>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+                <button id="dark-mode-toggle">🌙</button>
+            </ul>
+        </nav>
+        <div class="menu-toggle">&#9776;</div>
+    </header>
 
+    <!-- Image Slider -->
+    <section class="slider">
+        <div class="slides">
+            <img src="images/bg105.jpg" alt="Slider Image 1">
+            <img src="images/bg101.jpg" alt="Slider Image 2">
+            <img src="images/bg104.jpg" alt="Slider Image 3">
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="blog-container">
+        <h2>Latest Blogs</h2>
+        <div class="blog">
+            <img src="images/bg106.jpg" alt="Blog 1">
+            <h3>My First Blog Post</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus fermentum leo...</p>
+            <button class="read-more">Read More</button>
+        </div>
+        <div class="blog">
+            <img src="images/bg15.jpg" alt="Blog 2">
+            <h3>Another Blog Post</h3>
+            <p>Quisque elementum nibh at dolor pellentesque, a eleifend libero pharetra...</p>
+            <button class="read-more">Read More</button>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="contact-form">
+       <legend><h2>Contact Us</h2></legend>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <input type="date" required>
+            <input type="time" required>
+            <input type="text" placeholder="Your Location" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+    
+    <div class="comment-section">
+        <h3>Leave a Comment</h3><br>
+        <textarea id="comment" placeholder="Write your comment..."></textarea><br>
+        <button id="post-comment">Post Comment</button>
+        <div id="comments-list"></div>
     </div>
+    <div class="blog-sections">
+        <button class="like-btn">❤️ Like</button>
+        <button class="share-btn">🔗 Share</button>
+    </div>
+    <button class="read-more"><a href="post.html">Read More</a></button>
+    <h2>Blog Title</h2>
+    <p>Full blog content here...</p>
+    <button id="back-to-top">⬆ Top</button>
 </body>
 </html>
