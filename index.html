@@ -1,25 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dynamic Calendar</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>English Spoken with Vinod Sir</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="wbsite icon" type="png"
+  href="images/logo_1.jpg">
 </head>
 <body>
-
-    <div class="calendar">
-        <div class="header">
-            <button id="prevMonth">&lt;</button>
-            <h2 id="monthYear"></h2>
-            <button id="nextMonth">&gt;</button>
-        </div>
-        <div class="weekdays">
-            <div>Sun</div><div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div>
-        </div>
-        <div class="days" id="days"></div>
+  <!--header-->
+  <div class="navbar">
+    <div class="navbar"></div>
     </div>
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Welcome to English Spoken with Vinod Sir</h1>
+      <p>Master English with ease and confidence.</p>
+      <a href="#courses" class="btn">Explore Courses</a>
+    </div>
+  </header>
 
-    <script src="script.js"></script>
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>I'm Vinod Sir, a dedicated teacher with 5 years of experience in teaching English-speaking courses, English grammar, and competition grammar. My mission is to help you improve your communication skills and succeed in your goals.</p>
+    </div>
+  </section>
+      <!-- Contact Button -->
+      <button id="openForm">Contact Us</button>
+
+      <!-- Contact Form (Hidden by Default) -->
+      <div id="contactModal" class="modal">
+          <div class="modal-content">
+              <span class="close">&times;</span>
+              <h2>Contact Us</h2>
+              <form id="contactForm">
+                  <label for="name">Name:</label>
+                  <input type="text" id="name" name="name" required>
+                  
+                  <label for="email">Email:</label>
+                  <input type="email" id="email" name="email" required>
+                  
+                  <label for="message">Message:</label>
+                  <textarea id="message" name="message" required></textarea>
+                  
+                  <button type="submit">Send Message</button>
+              </form>
+
+  <!-- Courses Section -->
+  <section id="courses" class="courses">
+    <div class="container">
+      <h2>Courses Offered</h2>
+      <div class="course-list">
+        <div class="course-item">
+          <h3>English Speaking</h3>
+          <p>Enhance your fluency and confidence in spoken English.</p>
+        </div>
+        <div class="course-item">
+          <h3>English Grammar</h3>
+          <p>Master grammar rules to write and speak accurately.</p>
+        </div>
+        <div class="course-item">
+          <h3>Competition Grammar</h3>
+          <p>Prepare for competitive exams with targeted grammar lessons.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="testimonials">
+    <div class="container">
+      <h2>What Students Say</h2>
+      <p>Testimonials will be added here!</p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <form action="#" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+    </div>
+  </section>
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2025 English Spoken with Vinod Sir. All rights reserved.</p>
+  </footer>
+  
 </body>
 </html>

@@ -1,52 +1,15 @@
-const monthYear = document.getElementById("monthYear");
-const daysContainer = document.getElementById("days");
-const prevMonth = document.getElementById("prevMonth");
-const nextMonth = document.getElementById("nextMonth");
+// Validate the form when the user submits it
+document.querySelector("form").addEventListener("submit", function(event) {
+    // Get the values of the form fields
+    let name = document.querySelector("input[name='name']").value;
+    let email = document.querySelector("input[name='email']").value;
+    let message = document.querySelector("textarea[name='message']").value;
 
-let currentDate = new Date();
-let currentMonth = currentDate.getMonth();
-let currentYear = currentDate.getFullYear();
-
-const months = [
-    "January", "February", "March", "April", "May", "June",
-    "July", "August", "September", "October", "November", "December"
-];
-
-function renderCalendar() {
-    daysContainer.innerHTML = "";
-    let firstDay = new Date(currentYear, currentMonth, 1).getDay();
-    let lastDate = new Date(currentYear, currentMonth + 1, 0).getDate();
-
-    monthYear.innerText = `${months[currentMonth]} ${currentYear}`;
-
-    for (let i = 0; i < firstDay; i++) {
-        let emptyDiv = document.createElement("div");
-        daysContainer.appendChild(emptyDiv);
+    // Check if all fields are filled
+    if (name === "" || email === "" || message === "") {
+        alert("Please fill out all fields before submitting.");
+        event.preventDefault(); // Prevent form submission
+    } else {
+        alert("Thank you for your message! We will get back to you soon.");
     }
-
-    for (let day = 1; day <= lastDate; day++) {
-        let dayDiv = document.createElement("div");
-        dayDiv.innerText = day;
-        daysContainer.appendChild(dayDiv);
-    }
-}
-
-prevMonth.addEventListener("click", () => {
-    currentMonth--;
-    if (currentMonth < 0) {
-        currentMonth = 11;
-        currentYear--;
-    }
-    renderCalendar();
 });
-
-nextMonth.addEventListener("click", () => {
-    currentMonth++;
-    if (currentMonth > 11) {
-        currentMonth = 0;
-        currentYear++;
-    }
-    renderCalendar();
-});
-
-renderCalendar();
