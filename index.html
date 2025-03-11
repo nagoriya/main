@@ -3,133 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Website</title>
     <link rel="stylesheet" href="style.css">
-    <title>Application</title>
+    <script src="javascript.js" defer></script>
 </head>
 <body>
-    <fieldset class="form">
-        <legend>Equiry Form</legend>
-        <form mathod="" action="" >
-            
-            <label>Gender</label><br>
-            <input type="radio" value="Male" Name="Gender">Male
-            <input type="radio" value="Female" Name="Gender">Female
 
-            <br>
+    <!-- Navbar -->
+    <header>
+        <div class="logo">MyBlogs!</div>
+        <nav>
+            <ul class="nav-links">
+                <input type="text" id="search-bar" placeholder="Search blog...">
+                <button type="Secarh">Search</button>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+                <button id="dark-mode-toggle">🌙</button>
+            </ul>
+        </nav>
+        <div class="menu-toggle">&#9776;</div>
+    </header>
 
-            <label>Name</label><br>
-            <Input type="text" pattern="[a-zA-Z]{3,40}" title="Enter the value with 3-40 charset" placeholder="Enter the Name" name="Uname"/><br>
-            <label>Course</label><br>
-            <Input type="checkbox" value="PHP"/>Php
-            <Input type="checkbox" value="Java"/>Java Script
-            <Input type="checkbox" value="c"/>C
-            <Input type="checkbox" value="c++"/>C++
-            <br>
-            <Input type="checkbox" value="Python"/>Python
-            <Input type="checkbox" value="React"/>React
-            <Input type="checkbox" value="html"/>Html
-            <Input type="checkbox" value="Css"/>Css
-            <br>
-            <label>Email</label><br>
-            <input type="Text" pattern="[a-zA-Z]{3,40}" title="Enter the value with 3-40 charset" placeholder="Enter The Email Id" name="Uemail" /><br>
+    <!-- Image Slider -->
+    <section class="slider">
+        <div class="slides">
+            <img src="images/bg105.jpg" alt="Slider Image 1">
+            <img src="images/bg101.jpg" alt="Slider Image 2">
+            <img src="images/bg104.jpg" alt="Slider Image 3">
+        </div>
+    </section>
 
-            <label>Phone N.</label><br>
-            <input type="tel" pattern="[0-9]{10}" title="Enter the value with 10 digite" placeholder="Enter The Phone Number" name="UPhone" /><br>
+    <!-- Blog Section -->
+    <section class="blog-container">
+        <h2>Latest Blogs</h2>
+        <div class="blog">
+            <img src="images/bg106.jpg" alt="Blog 1">
+            <h3>My First Blog Post</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus fermentum leo...</p>
+            <button class="read-more">Read More</button>
+        </div>
+        <div class="blog">
+            <img src="images/bg15.jpg" alt="Blog 2">
+            <h3>Another Blog Post</h3>
+            <p>Quisque elementum nibh at dolor pellentesque, a eleifend libero pharetra...</p>
+            <button class="read-more">Read More</button>
+        </div>
+    </section>
 
-            
-            <label>Massage</label><br>
-            <textarea></textarea><br>
-            <label>Photo</label><br>
-            <input type="File"><br>
-            <label>Password</label><br>
-            <input type="Password"><br>
-            <label>Country</label><br>
-            <select>
-                <option value="-----Selector----">-----Selector----</option>
-                <option value="India">India</option>
-                <option value="India">America</option>
-                <option value="India">South Africa</option>
-                <option value="India">Shrilanka</option>
-                <option value="India">Afghanistan</option>
-                <option value="India">Algeria</option>
-                <option value="India">Argentina</option>
-                <option value="India">Austria</option>
-                <option value="India">Azerbaijan</option>
-                <option value="India">Bahrain</option>
-            </select>
-            <br>
-            <label>Courses</label><br>
-            <select><br>
-                <Optgroup label="Frontend"><br>
-                    <option>HTML</option>
-                    <option>CSS</option>
-                    <option>JAVA Script</option>
-                    <option>Python</option>
-                    <option>React</option>
-                </Optgroup><br>
-                <Optgroup label="Backend"><br>
-                    <option>PHP</option>
-                    <option>Node.js</option>
-                    <option>JAVA Script</option>
-                    <option>Python</option>
-                    <option>MySQL</option>
-                </Optgroup>
-            </select>
-            
-
-
-            <br>
-
-            <button type="Submit">Save</button>
-            <input type="Submit" value="Go" />
-            Name<br>
-            <input type="Text" minlength="5" maxlength="15" required Name=""><br>
-            <br>
-            QTY <br>
-            <input type="Number" min="1" max="20"><br>
-            <br>
-            Date <br>
-            <input type="Date"><br>
-            <br>
-            Time<br>
-            <input type="Time"><br>
-            <br>
-            Week<br>
-            <input type="Week"><br>
-            <br>
-            Month<br>
-            <input type="Month"><br>
-            <br>
-            Day<br>
-            <input type="Day"><br>
-            <br>
-            Color<br>
-            <input type="color"><br>
-            <br>
-            Day<br>
-            <input type="Day"><br>
-            <br>
-            Url<br>
-            <input type="url"><br>
-            <br>
-            Range<br>
-            <input type="range"><br>
-            <br>
-            List<br>
-            <input type="Text" list="Courses"/>
-            <datalist id="Courses"/>
-                <option value="PHP"/>
-                <option value="Java"/>
-                <option value="C"/>
-                <option value="C++"/>
-            </datalist>
-            <br>
-            <br>
-            <button>Save</button>
-            <input type="Reset" value="Reset">
-            <button type="reset">Reset</button>
-
-    </form>
-</fieldset>
+    <!-- Contact Form -->
+    <section class="contact-form">
+       <legend><h2>Contact Us</h2></legend>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <input type="date" required>
+            <input type="time" required>
+            <input type="text" placeholder="Your Location" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+    
+    <div class="comment-section">
+        <h3>Leave a Comment</h3><br>
+        <textarea id="comment" placeholder="Write your comment..."></textarea><br>
+        <button id="post-comment">Post Comment</button>
+        <div id="comments-list"></div>
+    </div>
+    <div class="blog-sections">
+        <button class="like-btn">❤️ Like</button>
+        <button class="share-btn">🔗 Share</button>
+    </div>
+    <button class="read-more"><a href="post.html">Read More</a></button>
+    <h2>Blog Title</h2>
+    <p>Full blog content here...</p>
+    <button id="back-to-top">⬆ Top</button>
 </body>
 </html>
