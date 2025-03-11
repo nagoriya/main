@@ -3,82 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog Website</title>
+    <title>Calculator</title>
     <link rel="stylesheet" href="style.css">
-    <script src="javascript.js" defer></script>
 </head>
 <body>
 
-    <!-- Navbar -->
-    <header>
-        <div class="logo">MyBlogs!</div>
-        <nav>
-            <ul class="nav-links">
-                <input type="text" id="search-bar" placeholder="Search blog...">
-                <button type="Secarh">Search</button>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Contact</a></li>
-                <button id="dark-mode-toggle">🌙</button>
-            </ul>
-        </nav>
-        <div class="menu-toggle">&#9776;</div>
-    </header>
+    <div class="calculator">
+        <input type="text" id="display" disabled>
+        <div class="buttons">
+            <button class="operator" onclick="clearDisplay()">C</button>
+            <button class="operator" onclick="appendValue('/')">/</button>
+            <button class="operator" onclick="appendValue('*')">*</button>
+            <button class="operator" onclick="deleteLast()">⌫</button>
+            
+            <button onclick="appendValue('7')">7</button>
+            <button onclick="appendValue('8')">8</button>
+            <button onclick="appendValue('9')">9</button>
+            <button class="operator" onclick="appendValue('-')">-</button>
+            
+            <button onclick="appendValue('4')">4</button>
+            <button onclick="appendValue('5')">5</button>
+            <button onclick="appendValue('6')">6</button>
+            <button class="operator" onclick="appendValue('+')">+</button>
 
-    <!-- Image Slider -->
-    <section class="slider">
-        <div class="slides">
-            <img src="images/bg105.jpg" alt="Slider Image 1">
-            <img src="images/bg101.jpg" alt="Slider Image 2">
-            <img src="images/bg104.jpg" alt="Slider Image 3">
-        </div>
-    </section>
+            <button onclick="appendValue('1')">1</button>
+            <button onclick="appendValue('2')">2</button>
+            <button onclick="appendValue('3')">3</button>
+            <button class="equal" onclick="calculate()">=</button>
 
-    <!-- Blog Section -->
-    <section class="blog-container">
-        <h2>Latest Blogs</h2>
-        <div class="blog">
-            <img src="images/bg106.jpg" alt="Blog 1">
-            <h3>My First Blog Post</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus fermentum leo...</p>
-            <button class="read-more">Read More</button>
+            <button onclick="appendValue('0')">0</button>
+            <button onclick="appendValue('.')">.</button>
         </div>
-        <div class="blog">
-            <img src="images/bg15.jpg" alt="Blog 2">
-            <h3>Another Blog Post</h3>
-            <p>Quisque elementum nibh at dolor pellentesque, a eleifend libero pharetra...</p>
-            <button class="read-more">Read More</button>
-        </div>
-    </section>
-
-    <!-- Contact Form -->
-    <section class="contact-form">
-       <legend><h2>Contact Us</h2></legend>
-        <form>
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <input type="date" required>
-            <input type="time" required>
-            <input type="text" placeholder="Your Location" required>
-            <textarea placeholder="Your Message" required></textarea>
-            <button type="submit">Submit</button>
-        </form>
-    </section>
-    
-    <div class="comment-section">
-        <h3>Leave a Comment</h3><br>
-        <textarea id="comment" placeholder="Write your comment..."></textarea><br>
-        <button id="post-comment">Post Comment</button>
-        <div id="comments-list"></div>
     </div>
-    <div class="blog-sections">
-        <button class="like-btn">❤️ Like</button>
-        <button class="share-btn">🔗 Share</button>
-    </div>
-    <button class="read-more"><a href="post.html">Read More</a></button>
-    <h2>Blog Title</h2>
-    <p>Full blog content here...</p>
-    <button id="back-to-top">⬆ Top</button>
+
+    <script src="script.js"></script>
 </body>
 </html>
