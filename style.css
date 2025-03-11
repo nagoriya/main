@@ -1,0 +1,18 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    font-family: sans-serif Arial, Helvetica, sans-serif;
+
+}
+
+.form{
+    background-color: rgb(204, 163, 101);
+    color: aliceblue;
+    display: flex;
+    align-items: center;
+    text-emphasis: none;
+    border-radius: 1px;
+    box-sizing: border-box;
+    padding-top: 20px;
+    margin-left: 10px;
+}

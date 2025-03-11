@@ -3,272 +3,133 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="homepage icon" type="png" href="image/amazon title icon.png">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <title>Amazon Clone</title>
+    <title>Application</title>
 </head>
 <body>
-    <header>
-        <div class="navbar">
-            <div class="nav-logo border">
-                <div class="logo"></div>
-            </div>
+    <fieldset class="form">
+        <legend>Equiry Form</legend>
+        <form mathod="" action="" >
             
-            <div class="nav-address border">
-                <p class="add-first">Deliver to Guna</p>
-                <div class="add-icon">
-                    <i class="fa-solid fa-location-dot"></i>
-                    <p class="add-second">India</p>
-                </div>
-            </div>
+            <label>Gender</label><br>
+            <input type="radio" value="Male" Name="Gender">Male
+            <input type="radio" value="Female" Name="Gender">Female
 
-            <div class="nav-search">
-                <select class="Search-select">
-                    <option>All</option>
-                </select>
-                <input placeholder="Search Item" class="search-input">
-                <div class="search-icon">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </div>
-            </div>
+            <br>
+
+            <label>Name</label><br>
+            <Input type="text" pattern="[a-zA-Z]{3,40}" title="Enter the value with 3-40 charset" placeholder="Enter the Name" name="Uname"/><br>
+            <label>Course</label><br>
+            <Input type="checkbox" value="PHP"/>Php
+            <Input type="checkbox" value="Java"/>Java Script
+            <Input type="checkbox" value="c"/>C
+            <Input type="checkbox" value="c++"/>C++
+            <br>
+            <Input type="checkbox" value="Python"/>Python
+            <Input type="checkbox" value="React"/>React
+            <Input type="checkbox" value="html"/>Html
+            <Input type="checkbox" value="Css"/>Css
+            <br>
+            <label>Email</label><br>
+            <input type="Text" pattern="[a-zA-Z]{3,40}" title="Enter the value with 3-40 charset" placeholder="Enter The Email Id" name="Uemail" /><br>
+
+            <label>Phone N.</label><br>
+            <input type="tel" pattern="[0-9]{10}" title="Enter the value with 10 digite" placeholder="Enter The Phone Number" name="UPhone" /><br>
+
             
-            <div class="nav-signin border">
-                <p><span>Hello, Sign In</span></p>
-                <p class="nav-second">Account & lists</p>
-            </div>
+            <label>Massage</label><br>
+            <textarea></textarea><br>
+            <label>Photo</label><br>
+            <input type="File"><br>
+            <label>Password</label><br>
+            <input type="Password"><br>
+            <label>Country</label><br>
+            <select>
+                <option value="-----Selector----">-----Selector----</option>
+                <option value="India">India</option>
+                <option value="India">America</option>
+                <option value="India">South Africa</option>
+                <option value="India">Shrilanka</option>
+                <option value="India">Afghanistan</option>
+                <option value="India">Algeria</option>
+                <option value="India">Argentina</option>
+                <option value="India">Austria</option>
+                <option value="India">Azerbaijan</option>
+                <option value="India">Bahrain</option>
+            </select>
+            <br>
+            <label>Courses</label><br>
+            <select><br>
+                <Optgroup label="Frontend"><br>
+                    <option>HTML</option>
+                    <option>CSS</option>
+                    <option>JAVA Script</option>
+                    <option>Python</option>
+                    <option>React</option>
+                </Optgroup><br>
+                <Optgroup label="Backend"><br>
+                    <option>PHP</option>
+                    <option>Node.js</option>
+                    <option>JAVA Script</option>
+                    <option>Python</option>
+                    <option>MySQL</option>
+                </Optgroup>
+            </select>
+            
 
-            <div class="nav-Returns border">
-                <p><span> Returns</span></p>
-                <p class="nav-second">& Orders</p>
-            </div>
-            <div class="nav-cart border">
-                <i class="fa-solid fa-cart-shopping"></i>
-                card
-            </div>
 
-            </div>
-            <div class="panel">
-                <div class="panel-all border">
-                    <i class="fa-solid fa-bars"></i>
-                    All
-                </div>
-                <div class="panel-ops border">
-                    <p>Mx Player</p>
-                    <p>Sell</p>
-                    <p>Best Sellers</p>
-                    <p>today's deals</p>
-                    <p>Mobiles</p>
-                    <p>Customer Service</p>
-                    <p>Prime</p>
-                    <p>Electronics</p>
-                    <p>New Release</p>
-                    <p>Amazon Pay</p>
-                    <p>Home & Kitchen</p>
-                    <p>Fashin</p>
-                    <p>Computers</p>
-                    <p>Books</p>
-                </div>
-        </div>    
-    </header>
+            <br>
 
-    <div class="hero-section">
-        <div class="hero-msg">
-            <p>you are on amazon.com. you can also shop on Amazon India for millions of products with fast local delivery. <a>Click here to go to amazon.in.</a> </p>
-        </div>
-    </div>
-    <div class="shop-section border">
-        <div class="box1 box ">
-            <h2>Deals related to items you've saved</h2>
-            <div class="box-img" style="background-image: url('Image/boxx1.jpg');"></div>
-            <p class="see">See more..</p>
-        </div>
-        <div class="box2 box">
-            <h2>Appliances for your home | Up to 55% off</h2>
-            <div class="box-img" style="background-image: url('Image/boxx2.jpg');"></div>
-            <p class="see">See more..</p>
-        </div>
-        <div class="box3 box">
-            <h2>Revamp your home in style</h2>
-            <div class="box-img" style="background-image: url('Image/boxx3.JPG');"></div>
-            <p class="see">See more..</p>
-        </div>
-        <div class="box4 box">
-            <h2>Starting ₹149 | Headphones</h2>
-            <div class="box-img" style="background-image: url('Image/boxx4.JPG');"></div>
-            <p class="see">See more..</p>
-        </div>
-        <br>
-        <div class="box4 box">
-            <h2>Automotive essentials | Up to 60% off</h2>
-            <div class="box-img" style="background-image: url('Image/boxx5.JPG');"></div>
-            <p class="see">See more..</p>
-        </div>
-        <div class="box4 box">
-            <h2>Starting ₹199 | Amazon Brands & more</h2>
-            <div class="box-img" style="background-image: url('Image/boxx6.JPG');"></div>
-            <p class="see">See more..</p>
-        </div>
-        <div class="box4 box">
-            <h2>Up to 60% off | Styles for women</h2>
-            <div class="box-img" style="background-image: url('Image/boxx7.JPG');"></div>
-            <p class="see">See more..</p>
-        </div>
-        <br>
-        <div class="box4 box">
-            <h2>Under ₹499 | Pocket-friendly fashion</h2>
-            <div class="box-img" style="background-image: url('Image/boxx8.JPG');"></div>
-            <p class="see">See more..</p>
-        </div>
-        <div class="box4 box">
-            <h2>Customers’ Most-Loved Fashion for you</h2>
-            <div class="box-img" style="background-image: url('Image/boxx9.JPG');"></div>
-            <p class="see">See more..</p>
-        </div>
-        <div class="box4 box">
-            <h2>Customers’ Most-Loved products</h2>
-            <div class="box-img" style="background-image: url('Image/boxx10.JPG');"></div>
-            <p class="see">See more..</p>
-        </div>
-        <div class="box4 box">
-            <h2>Appliances for your home | Up to 55% off</h2>
-            <div class="box-img" style="background-image: url('Image/boxx11.JPG');"></div>
-            <p class="see">See more..</p>
-        </div>
-        <br>
-        <div class="box4 box">
-            <h2>Appliances for your home | Up to 55% off</h2>
-            <div class="box-img" style="background-image: url('Image/box3.jpg');"></div>
-            <p class="see">See more..</p>
-        </div>
-        <div class="box4 box">
-            <h2>Appliances for your home | </h2>
-            <div class="box-img" style="background-image: url('Image/box4.jpg');"></div>
-            <p class="see">See more..</p>
-        </div>
-        <div class="box4 box">
-            <h2>Appliances for your home | Up to 55% off</h2>
-            <div class="box-img" style="background-image: url('Image/box5.jpg');"></div>
-            <p class="see">See more..</p>
-        </div>
-        <div class="box4 box">
-            <h2>Appliances for your home | Up to 55% off</h2>
-            <div class="box-img" style="background-image: url('Image/box6.jpg');"></div>
-            <p class="see">See more..</p>
-        </div>
-        <div class="box4 box">
-            <h2>Appliances for your home | Up to 55% off</h2>
-            <div class="box-img" style="background-image: url('Image/box7.jpg');"></div>
-            <p class="see">See more..</p>
-        </div>
-    </div>
-    <br>
-    <hr>
-    <footer>
-        <div class="footer-sectiona border">
-            <h2 class="footer-penala">See personalized recommendations</h2>
-            <p class="new">New Customer? <a class="here">Start Here</a></p>
-        </div>
-        <hr>
-        <div class="footer-sectionb border">
-            <div>Back to top</div>
-        </div>
-        <div class="footer-sectionc border">
-            <ul>
-                <h2 class="font border">Get to Know Us</h2>
-                <a>About Amazon</a>
-                <a>Press Releases</a>
-                <a>Amazon Science</a>
-            </ul>
-            <ul>
-                <h2 class="font border">Connect with Us</h2>
-                <a>Facebook</a>
-                <a>Twitter</a>
-                <a>Instagram</a>
-            </ul>
-            <ul>
-                <h2 class="font border">Make Money with Us</h2>
-                <a>Sell on Amazon</a>
-                <a>Sell under Amazon Accelerator</a>
-                <a>Protect and Build Your Brand</a>
-                <a>Amazon Global Selling</a>
-                <a>Supply to Amazon</a>
-                <a>Become an Affiliate</a>
-                <a>Fulfilment by Amazon</a>
-                <a>Advertise Your Products</a>
-                <a>Amazon Pay on Merchants</a>
-            </ul>
-            <ul>
-                <h2 class="font border">Let Us Help You</h2>
-                <a>Your Account</a>
-                <a>Returns Centre</a>
-                <a>Recalls and Product Safety Alerts</a>
-                <a>Purchase Protection</a>
-                <a>Amazon App Download</a>
-                <a>Help</a>
-            </ul>            
-        </div>
-        <hr>
-        <div class="foot-penala">
-            <dov class="logo"></dov>
-        </div>
-        <div class="pages">
-            <ul>
-                <h6>AbeBooks</h6>
-                <a>Books, art</a>
-                <a>& collectibles</a>
-            </ul>
-            <ul>
-                <h6>Amazon Web Services</h6>
-                <a>Scalable Cloud</a>
-                <a>Computing Services</a>
-            </ul>
-            <ul>
-                <h6>Audible</h6>
-                <a>Download</a>
-                <a>Audio Books</a>
-            </ul>
-            <ul>
-                <h6>IMDb</h6>
-                <a>Movies, TV</a>
-                <a>& Celebrities</a>
-            </ul>
-        </div>
-        <div class="pages2">
-            <ul>
-                <h6>AbeBooks</h6>
-                <a>Books, art</a>
-                <a>& collectibles</a>
-            </ul>
-            <ul>
-                <h6>Amazon Web Services</h6>
-                <a>Scalable Cloud</a>
-                <a>Computing Services</a>
-            </ul>
-            <ul>
-                <h6>Audible</h6>
-                <a>Download</a>
-                <a>Audio Books</a>
-            </ul>
-            <ul>
-                <h6>IMDb</h6>
-                <a>Movies, TV</a>
-                <a>& Celebrities</a>
-            </ul>            
-        </div>
-        <div class="footer-last">
-            <div>Conditions of Use & Sale</div>
-            <div>Privacy Notice</div>
-            <div>Interest-Based Ads</div>
-        </div>
-        <div class="coppy">
-            <div>© 1996-2025, Amazon.com, Inc. or its affiliates</div>
-        </div>
-        
-    </footer>
+            <button type="Submit">Save</button>
+            <input type="Submit" value="Go" />
+            Name<br>
+            <input type="Text" minlength="5" maxlength="15" required Name=""><br>
+            <br>
+            QTY <br>
+            <input type="Number" min="1" max="20"><br>
+            <br>
+            Date <br>
+            <input type="Date"><br>
+            <br>
+            Time<br>
+            <input type="Time"><br>
+            <br>
+            Week<br>
+            <input type="Week"><br>
+            <br>
+            Month<br>
+            <input type="Month"><br>
+            <br>
+            Day<br>
+            <input type="Day"><br>
+            <br>
+            Color<br>
+            <input type="color"><br>
+            <br>
+            Day<br>
+            <input type="Day"><br>
+            <br>
+            Url<br>
+            <input type="url"><br>
+            <br>
+            Range<br>
+            <input type="range"><br>
+            <br>
+            List<br>
+            <input type="Text" list="Courses"/>
+            <datalist id="Courses"/>
+                <option value="PHP"/>
+                <option value="Java"/>
+                <option value="C"/>
+                <option value="C++"/>
+            </datalist>
+            <br>
+            <br>
+            <button>Save</button>
+            <input type="Reset" value="Reset">
+            <button type="reset">Reset</button>
 
-    
-
-    
+    </form>
+</fieldset>
 </body>
 </html>
