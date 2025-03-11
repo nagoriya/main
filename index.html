@@ -1,52 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>My Flask Website</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vinodkumarnagoriya</title>
+    <link rel="website icon" type="png" href="images/logo_1.jpg">
+    <link rel="stylesheet" href="stayle.css">
 </head>
 <body>
-  <!-- Header Section -->
-  <header>
-    <h1>Welcome to My Website</h1>
-    <nav>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-  
-  <!-- Main Content Section -->
-  <main>
-    <section>
-      <h2>About Our Website</h2>
-      <p>This is a simple website built using HTML, CSS, and Python (Flask).</p>
-    </section>
-    
-    <!-- Application Form Section -->
-    <section class="form-section">
-      <h2>Contact Us</h2>
-      <form action="/" method="post">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" placeholder="Enter your name" required>
-        
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" placeholder="Enter your email" required>
-        
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" placeholder="Enter your message" required></textarea>
-        
-        <button type="submit">Submit</button>
-      </form>
-    </section>
-  </main>
-  
-  <!-- Footer Section -->
-  <footer>
-    <p>&copy; 2025 My Flask Website. All Rights Reserved.</p>
-  </footer>
+    <header>
+        <div class="logo">
+            <p>Vinod Kumar Nagoriya</p>
+        </div>
+        <nav>
+            <ul>
+                <li> <a href="#">Home</a></li>
+                <li> <a href="#">Services</a></li>
+                <li> <a href="#">About</a></li>
+                <li> <a href="#">Contact Us</a></li>
+                <li> <a href="#">Gallary</a></li>
+                <input type="text" placeholder="Search Services">
+                <li> <a href="#">Profile</a></li>
+                <li> <a href="#">SignIn</a></li>
+                <li> <a href="#">SignUp</a></li>
+            </ul> 
+        </nav>
+        <button> <a href="#">Get Started</a></button>
+    </header>
+    <div class="content-iteam">
+        <img src="images/bg6jpg.webp" alt="">
+    </div>  
+    <footer>
+        <div class="footer-content">
+          <p>&copy; 2025 Your Company. All rights reserved.</p>
+          <nav>
+            <ul>
+              <li><a href="#privacy-policy">Privacy Policy</a></li>
+              <li><a href="#terms-of-service">Terms of Service</a></li>
+              <li><a href="#contact-us">Contact Us</a></li>
+            </ul>
+          </nav>
+        </div>
+      </footer>    
 </body>
 </html>
