@@ -1,22 +1,15 @@
-// Button Click Event
-document.getElementById("btn").onclick = function() {
-    alert("Hello! Welcome to my website.");
-};
+// Validate the form when the user submits it
+document.querySelector("form").addEventListener("submit", function(event) {
+    // Get the values of the form fields
+    let name = document.querySelector("input[name='name']").value;
+    let email = document.querySelector("input[name='email']").value;
+    let message = document.querySelector("textarea[name='message']").value;
 
-// Form Validation
-document.querySelector("form").onsubmit = function(event) {
-    let name = document.getElementById("name").value;
-    let email = document.getElementById("email").value;
-    let phone = document.getElementById("phone").value;
-
-    if (name === "" || email === "" || phone === "") {
-        alert("Please fill out all fields.");
-        event.preventDefault(); // Form submit hone se rokne ke liye
+    // Check if all fields are filled
+    if (name === "" || email === "" || message === "") {
+        alert("Please fill out all fields before submitting.");
+        event.preventDefault(); // Prevent form submission
     } else {
-        alert("Thank you! Your message has been sent.");
+        alert("Thank you for your message! We will get back to you soon.");
     }
-};
-
-document.getElementById("Submit").onclick = function() {
-    alert("Hello! Welcome to my first .");
-};
+});
