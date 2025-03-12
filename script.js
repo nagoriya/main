@@ -1,52 +1,22 @@
-const monthYear = document.getElementById("monthYear");
-const daysContainer = document.getElementById("days");
-const prevMonth = document.getElementById("prevMonth");
-const nextMonth = document.getElementById("nextMonth");
+// Button Click Event
+document.getElementById("btn").onclick = function() {
+    alert("Hello! Welcome to my website.");
+};
 
-let currentDate = new Date();
-let currentMonth = currentDate.getMonth();
-let currentYear = currentDate.getFullYear();
+// Form Validation
+document.querySelector("form").onsubmit = function(event) {
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let phone = document.getElementById("phone").value;
 
-const months = [
-    "January", "February", "March", "April", "May", "June",
-    "July", "August", "September", "October", "November", "December"
-];
-
-function renderCalendar() {
-    daysContainer.innerHTML = "";
-    let firstDay = new Date(currentYear, currentMonth, 1).getDay();
-    let lastDate = new Date(currentYear, currentMonth + 1, 0).getDate();
-
-    monthYear.innerText = `${months[currentMonth]} ${currentYear}`;
-
-    for (let i = 0; i < firstDay; i++) {
-        let emptyDiv = document.createElement("div");
-        daysContainer.appendChild(emptyDiv);
+    if (name === "" || email === "" || phone === "") {
+        alert("Please fill out all fields.");
+        event.preventDefault(); // Form submit hone se rokne ke liye
+    } else {
+        alert("Thank you! Your message has been sent.");
     }
+};
 
-    for (let day = 1; day <= lastDate; day++) {
-        let dayDiv = document.createElement("div");
-        dayDiv.innerText = day;
-        daysContainer.appendChild(dayDiv);
-    }
-}
-
-prevMonth.addEventListener("click", () => {
-    currentMonth--;
-    if (currentMonth < 0) {
-        currentMonth = 11;
-        currentYear--;
-    }
-    renderCalendar();
-});
-
-nextMonth.addEventListener("click", () => {
-    currentMonth++;
-    if (currentMonth > 11) {
-        currentMonth = 0;
-        currentYear++;
-    }
-    renderCalendar();
-});
-
-renderCalendar();
+document.getElementById("Submit").onclick = function() {
+    alert("Hello! Welcome to my first .");
+};

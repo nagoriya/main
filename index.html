@@ -3,23 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dynamic Calendar</title>
+    <title>My Website</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="calendar">
-        <div class="header">
-            <button id="prevMonth">&lt;</button>
-            <h2 id="monthYear"></h2>
-            <button id="nextMonth">&gt;</button>
-        </div>
-        <div class="weekdays">
-            <div>Sun</div><div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div>
-        </div>
-        <div class="days" id="days"></div>
-    </div>
+    <!-- Navigation Bar -->
+    <header>
+        <img class="logo" src="images/logo_1.jpg" alt="logo" width="40px" height="40px">
+        <h1>My Website !</h1>
+        <nav>
+            <ul>
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#About">About</a></li>
+                <li><a href="#Contact">Contact us</a></li>
+                <li><a href="#Gallary">Gallary</a></li>
+                <li><a href="#courses">Courses</a></li>
+                <li><a href="#profile">Profile</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <script src="script.js"></script>
+    <!-- Hero Section -->
+    <section id="home">
+        <h2>Welcome to My Website !</h2>
+        <p>This is a simple website using HTML, CSS, and JavaScript!</p>
+        <img class="image" src="images/bg10.webp" alt="image" width="200" height="300">
+        <img class="image" src="images/bg10.webp" alt="image" width="200" height="300">
+        <img class="image" src="images/bg10.webp" alt="image" width="200" height="300">
+        <img class="image" src="images/bg10.webp" alt="image" width="200" height="300">
+        <img class="image" src="images/bg10.webp" alt="image" width="200" height="300">
+        <img class="image" src="images/bg10.webp" alt="image" width="200" height="300">
+        <button id="btn">Click Me</button>
+    </section>
+
+    <!-- About Section -->
+    <section id="Submit">
+        <h2>About Me</h2>
+        <p>I am learning web development to build amazing websites.</p>
+        <button id="btn">Submit</button>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form>
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <input type="phone" id="phone" placeholder="Your phone" required>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
 </body>
+<script src="script.js"></script>
 </html>

@@ -1,60 +1,78 @@
-body {
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f4f4f4;
 }
 
-.calendar {
-    width: 320px;
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+body {
     text-align: center;
 }
 
-.header {
+header {
+    background: #333;
+    color: white;
+    padding: 15px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
-    margin-bottom: 10px;
+    text-align: center;
+    background-image: url(images/backimage.jpg);
+
+    
+}
+.logo{
+    border-radius: 50px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+section {
+    padding: 50px;
+}
+
+#home {
+    background: lightblue;
+    padding: 50px;
 }
 
 button {
-    padding: 5px 10px;
-    border: none;
-    background-color: #3498db;
+    background: darkblue;
     color: white;
-    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
     cursor: pointer;
-    border-radius: 5px;
 }
 
 button:hover {
-    background-color: #2980b9;
+    background: lightgreen;
 }
 
-.weekdays, .days {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    gap: 5px;
-    text-align: center;
+form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: auto;
 }
 
-.weekdays div {
-    font-weight: bold;
-    padding: 5px;
-}
-
-.days div {
+input, button {
+    margin: 10px 0;
     padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
 }
 
-.days div:hover {
-    background-color: #ddd;
+.image{
+    padding-left: 20px;
 }
