@@ -1,97 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume - Vinod Kumar Nagoriya</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="resume">
-        <div class="left-section">
-            <div class="profile">
-                <img src="image.jpg.png" alt="Vinod Kumar Nagoriya">
-                <h2>Vinod Kumar Nagoriya</h2>
-                <p>Frontend Web Developer</p>
-            </div>
-            <div class="contact">
-                <h3>Contact</h3>
-                <p><strong>Phone:</strong>7828932937</p>
-                <p><strong>Email:</strong>Nagoriyavinodkumar@gmail.com</p>
-                <p><strong>Address:</strong> Ward n. 12 Khatoli Mohalla Binaganj Guna 473115, Madhya Pradesh, India</p>
-            </div>
-            <div class="education">
-                <h3>Education</h3>
-                <p><strong>[10Th,12Th,BA,MA, MSW,MBA,PGDCA Computer Diploma]</strong></p>
-                <p>•	M.A. English literature Final year 2022  Maharishi Mahesh yogi vedic vishwavidyalaya Jabalpur.</p>
-                <p>•MSW Master of social worker  Final Year 2019 Maharishi Mahesh yogi vedic vishwavidyalaya Jabalpur.</p>
-                <p>•PGDCA Diploma in Computer Application  Passed in year 2013 With First Division (67%) from jiwaji university.</p>
-                <p>•B.A. final year 2010 Pass In the First Division(60%) Jiwaji University Gwalior.</p>
-                <p>•12th Higher Secondary passed in year 2007 With first Division (60%)From M.P Board of Education.</p>
-                <p>•10th High School passed in year 2005 With third Division (42%)From M.P Board of Education.</p>
-            </div>
-            <div class="expertise">
-                <h3>Skills.</h3>
-                <ul>
-                    <li>HTML, CSS, JavaScript.</li>
-                    <li>React.</li>
-                    <li>Python, Node.js.</li>
-                    <li>Frontend Development.</li>
-                    <li>Web Design.</li>
-                    <li>Dynamic DashBoard.</li>
-                    <li>Excel Expert.</li>
-                    <li>Pivot Table.</li>
-                    <li>MS Word,Power Point,PPT.</li>
-                </ul>
-            </div>
-            <div class="languages">
-                <h3>Languages</h3>
-                <p>English</p>
-                <p>Hindi</p>
-            </div>
-        </div>
-        <div class="right-section">
-            <h2>Work Experience</h2>
-            <div class="experience">
-                <h3>College Teacher</h3>
-                <p><strong>P.G. Girls College Chochouda Road Binaganj, Guna.</strong></p>
-                <p>•Presently Working <br> Madhya Pradesh Jan Abhiyan Parishad  PG Girls Collage Binaganj  07-May-2022 To Running. <br> 
-                    Post- Mentor. 
-                    </p>
-                <p>•Previous experience:- Jio Reliance MIS executive 30-March-2023 To 25-April-2023. <br>
-                    Post- Dg mobile. 
-                    </p>
-                <p>•Previous experience :- Rao Madhav vikash samitee 15-Fab-2022 To 28-March-2023. <br>
-                    Post- Team Leader. 
-                    .</p>
-                <p>•Previous experience:- kalptaru vikash samitee 15-jun-2021 To 12-Feb-2022. <br>
-                    Post-Team Leader.
-                    </p>
-                <p>•Previous experience:- super 30 coaching competitive English 01-jan-2021 To 11-jun-2021. <br>
-                    Post-Teacher. 
-                    </p>
-                <p>•Previous experience :-Fullerton india credit company limited 24-MARCH-2018 To 29-dec-2020.  <br>                                                                   
-                    Post :- Branch Credit manager.
-               </p>
-                <p>•Previous experience :-Fusion Micro Finance (P) Ltd. 13-April-2013 TO 23-MARCH-2018.      <br>    
-                    Post:- Assistant Branch Manager.
-               </p>
-            </div>
-            <div class="experience">
-                <h3>Frontend Developer</h3>
-                <p><strong>Freelance</strong> (2023 - Present)</p>
-                <p>Developing web applications using HTML, CSS, JavaScript, React, and Node.js.</p>
-            </div>
-            <h2>References</h2>
-            <div class="references">
-                <div class="reference">
-                    <h3>Reference Name</h3>
-                    <p><strong>Phone:</strong> 7828932937</p>
-                    <p><strong>Email:</strong>Nagoriyavinodkumar@email.com</p>
-                </div>
-            </div>
-        </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic-Tac-Toe Game</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="msg-container hide">
+      <p id="msg">Winner</p>
+      <button id="new-btn">New Game</button>
     </div>
-</body>
-<script src="javascript.js"></script>
+    <main>
+      <h1>Tic Tac Toe</h1>
+      <div class="container">
+        <div class="game">
+          <button class="box"></button>
+          <button class="box"></button>
+          <button class="box"></button>
+          <button class="box"></button>
+          <button class="box"></button>
+          <button class="box"></button>
+          <button class="box"></button>
+          <button class="box"></button>
+          <button class="box"></button>
+        </div>
+      </div>
+      <button id="reset-btn">Reset Game</button>
+    </main>
+    <script src="app.js"></script>
+  </body>
 </html>
