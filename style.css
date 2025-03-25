@@ -1,71 +1,71 @@
-body {
-    font-family: Arial, sans-serif;
+* {
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-}
-
-.resume {
-    display: flex;
-    width: 800px;
-    margin: 20px auto;
-    background: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.left-section {
-    width: 30%;
-    background: #2c3e50;
-    color: white;
-    padding: 20px;
-}
-
-.left-section .profile {
     text-align: center;
-}
-
-.left-section .profile img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-}
-
-.left-section h3 {
-    margin-top: 20px;
-    border-bottom: 1px solid #ffffff;
-    padding-bottom: 5px;
-}
-
-.left-section p, .left-section ul {
-    font-size: 14px;
-    line-height: 1.6;
-}
-
-.left-section ul {
-    list-style: none;
-    padding: 0;
-}
-
-.left-section ul li {
-    padding: 5px 0;
-}
-
-.right-section {
-    width: 70%;
-    padding: 20px;
-}
-
-.right-section h2 {
-    color: #2c3e50;
-    border-bottom: 2px solid #2c3e50;
-    padding-bottom: 5px;
-}
-
-.experience, .references {
-    margin-top: 20px;
+  }
+  
+  h1 {
+    background-color: #081b31;
+    color: #fff;
+    height: 5rem;
+    line-height: 5rem;
+  }
+  
+  .choice {
+    height: 150px;
+    width: 150px;
+    border-radius: 55%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     
-}
-
-.reference {
-    margin-top: 10px;
-}
+  }
+  
+  .choice:hover {
+    cursor: pointer;
+    background-color: #182e47;
+  }
+  
+  img {
+    height: 145px;
+    width: 145px;
+    object-fit: cover;
+    border-radius: 55%;
+   
+    
+  }
+  
+  .choices {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    margin-top: 5rem;
+  }
+  
+  .score-board {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    margin-top: 3rem;
+    gap: 5rem;
+  }
+  
+  #user-score,
+  #comp-score {
+    font-size: 4rem;
+  }
+  
+  .msg-container {
+    margin-top: 5rem;
+  }
+  
+  #msg {
+    background-color: #081b31;
+    color: #fff;
+    font-size: 2rem;
+    display: inline;
+    padding: 1rem;
+    border-radius: 1rem;
+  }
