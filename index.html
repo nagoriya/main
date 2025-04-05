@@ -1,31 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dynamic Dashboard</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="dashboard">
-        <aside class="sidebar">
-            <h2>Dashboard</h2>
-            <ul>
-                <li>Home</li>
-                <li>Analytics</li>
-                <li>Reports</li>
-                <li>Settings</li>
-            </ul>
-        </aside>
-        
-        <main class="content">
-            <h1>Welcome to Dynamic Dashboard</h1>
-            <canvas id="chart"></canvas> 
-            <button onclick="updateChart()">Update Chart</button>
-        </main>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic-Tac-Toe Game</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="msg-container hide">
+      <p id="msg">Winner</p>
+      <button id="new-btn">New Game</button>
     </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="script.js"></script>
-</body>
+    <main>
+      <h1>Tic Tac Toe</h1>
+      <div class="container">
+        <div class="game">
+          <button class="box"></button>
+          <button class="box"></button>
+          <button class="box"></button>
+          <button class="box"></button>
+          <button class="box"></button>
+          <button class="box"></button>
+          <button class="box"></button>
+          <button class="box"></button>
+          <button class="box"></button>
+        </div>
+      </div>
+      <button id="reset-btn">Reset Game</button>
+    </main>
+    <script src="app.js"></script>
+  </body>
 </html>
