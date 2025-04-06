@@ -1,33 +1,43 @@
-// Get the chart canvas
-let ctx = document.getElementById('chart').getContext('2d');
+// OpenWeatherMap API key (replace with your own API key)
+const API_KEY = "http://api.openweathermap.org/data/2.5/forecast?id=524901&appid={API key}";
 
-// Initial Chart Data
-let chartData = {
-    labels: ["Jan", "Feb", "Mar", "Apr", "May","juna","july","Aug"],
-    datasets: [{
-        label: "Sales",
-        data: [10, 20, 30, 40, 50,60,70,80,90,100],
-        backgroundColor: "rgba(54, 162, 235, 0.6)"
-    }]
-};
-
-// Create Chart
-let myChart = new Chart(ctx, {
-    type: 'bar',
-    data: chartData
+// Form submit event listener
+document.getElementById("weatherForm").addEventListener("submit", function(event) {
+  event.preventDefault();
+  const city = document.getElementById("cityInput").value;
+  getWeather(city);
 });
 
-// Function to Update Chart Dynamically
-function updateChart() {
-    myChart.data.datasets[0].data = [
-        Math.floor(Math.random() * 100),
-        Math.floor(Math.random() * 100),
-        Math.floor(Math.random() * 100),
-        Math.floor(Math.random() * 100),
-        Math.floor(Math.random() * 100),
-        Math.floor(Math.random() * 100),
-        Math.floor(Math.random() * 100),
-        Math.floor(Math.random() * 100)
-    ];
-    myChart.update();
+// Function to fetch weather data
+function getWeather(city) {
+  // OpenWeatherMap API URL (using metric units for Celsius)
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`;
+  
+  fetch(url)
+    .then(response => {
+      if(!response.ok){
+        throw new Error("City not found");
+      }
+      return response.json();
+    })
+    .then(data => {
+      displayWeather(data);
+    })
+    .catch(error => {
+      document.getElementById("weatherResult").innerHTML = `<p>Error: ${error.message}</p>`;
+    });
+}
+
+// Function to display weather data on the page
+function displayWeather(data) {
+  const weatherResult = document.getElementById("weatherResult");
+  const { name, main, weather } = data;
+  const temperature = main.temp;
+  const description = weather[0].description;
+  
+  weatherResult.innerHTML = `
+    <p><strong>City:</strong> ${name}</p>
+    <p><strong>Temperature:</strong> ${temperature} &deg;C</p>
+    <p><strong>Condition:</strong> ${description}</p>
+  `;
 }

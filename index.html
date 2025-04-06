@@ -1,100 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        *{
-            margin: 0%;
-            padding: 0%;
-            font-family: sans-serif;
-        }
-        .modal{
-            width: 300px;
-            height: 300px;
-            box-shadow: 0px 0px 10px 2px salmon;
-            position: fixed;
-            transition: 0.8s;
-            top: -500px;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-        .modal h2 {
-            text-align: center;
-            border-bottom: 1px solid #cccc;
-            font-weight: normal;
-            font-size: 20px;
-            padding: 10px 0px;
-            position: relative;
-        }
-        .modal h2 span{
-            position: absolute;
-            right: 10px;
-            font-size: 30px;
-            top: 0px;
-            cursor: pointer;
-        }
-        .showmodal{
-            top: 50%;
-
-        }
-        .applicati-form{
-            margin-left: 20px;
-        }
-
-        .applicati-form input{
-            width: 90%;
-        }
-        .myButton{
-            margin-top: 20px;
-            font-size: 15px;
-            text-align: center;
-            align-items: center;
-            justify-content: center;
-            display: flex;
-            margin-left: 40%;
-            
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Simple Weather App</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="modal">
-        <h2>Enquiry Now
-            <span>&times;</span>
-        </h2>
-        <div class="applicati-form">
-            <div>Name</div>
-            <input type="text"  placeholder="Enter your Name"><br>
-            <div>Mobile Number</div>
-            <input type="text" placeholder="Enter Your Mobile NUmber"><br>
-            <div>Email Id</div>
-            <input type="text" placeholder="Enter yourEmail Id"><br>
-            <div>Address</div>
-            <input type="text" placeholder="Enter your Address"><br>
-            <div>Grade/Class</div>
-            <input type="text" placeholder="Enter your Grade/Class">
-        </div>
-        <button class="myButton">Submit</button>
+  <div class="weather-container">
+    <h1>Weather App</h1>
+    <form id="weatherForm">
+      <input type="text" id="cityInput" placeholder="Enter City Name" required>
+      <button type="submit">Get Weather</button>
+    </form>
+    <div id="weatherResult">
+      <!-- Weather data will be shown here -->
     </div>
-   
-    <button>Show Modal</button>
-    <button id="btn1">Toggle Modal</button>
-    
+  </div>
+  
+  <script src="script.js"></script>
 </body>
-<script>
-    let btn=document.querySelector("button")
-    let modal=document.querySelector(".modal")
-    let closeIcon=document.querySelector(".modal h2 span")
-
-    btn.addEventListener("click", ()=>{
-        modal.classList.add('showmodal')
-    })
-    closeIcon.addEventListener("click",()=>{
-        modal.classList.remove('showmodal')
-    })
-    document.querySelector("#btn1").addEventListener("click",()=>{
-        modal.classList.toggle("showmodal")
-    })
-</script>
 </html>
