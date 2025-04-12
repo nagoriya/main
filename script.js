@@ -1,43 +1,15 @@
-// OpenWeatherMap API key (replace with your own API key)
-const API_KEY = "http://api.openweathermap.org/data/2.5/forecast?id=524901&appid={API key}";
+// Validate the form when the user submits it
+document.querySelector("form").addEventListener("submit", function(event) {
+    // Get the values of the form fields
+    let name = document.querySelector("input[name='name']").value;
+    let email = document.querySelector("input[name='email']").value;
+    let message = document.querySelector("textarea[name='message']").value;
 
-// Form submit event listener
-document.getElementById("weatherForm").addEventListener("submit", function(event) {
-  event.preventDefault();
-  const city = document.getElementById("cityInput").value;
-  getWeather(city);
+    // Check if all fields are filled
+    if (name === "" || email === "" || message === "") {
+        alert("Please fill out all fields before submitting.");
+        event.preventDefault(); // Prevent form submission
+    } else {
+        alert("Thank you for your message! We will get back to you soon.");
+    }
 });
-
-// Function to fetch weather data
-function getWeather(city) {
-  // OpenWeatherMap API URL (using metric units for Celsius)
-  const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`;
-  
-  fetch(url)
-    .then(response => {
-      if(!response.ok){
-        throw new Error("City not found");
-      }
-      return response.json();
-    })
-    .then(data => {
-      displayWeather(data);
-    })
-    .catch(error => {
-      document.getElementById("weatherResult").innerHTML = `<p>Error: ${error.message}</p>`;
-    });
-}
-
-// Function to display weather data on the page
-function displayWeather(data) {
-  const weatherResult = document.getElementById("weatherResult");
-  const { name, main, weather } = data;
-  const temperature = main.temp;
-  const description = weather[0].description;
-  
-  weatherResult.innerHTML = `
-    <p><strong>City:</strong> ${name}</p>
-    <p><strong>Temperature:</strong> ${temperature} &deg;C</p>
-    <p><strong>Condition:</strong> ${description}</p>
-  `;
-}
