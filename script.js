@@ -1,15 +1,8 @@
-// Validate the form when the user submits it
-document.querySelector("form").addEventListener("submit", function(event) {
-    // Get the values of the form fields
-    let name = document.querySelector("input[name='name']").value;
-    let email = document.querySelector("input[name='email']").value;
-    let message = document.querySelector("textarea[name='message']").value;
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TJJ2ZWBK');
 
-    // Check if all fields are filled
-    if (name === "" || email === "" || message === "") {
-        alert("Please fill out all fields before submitting.");
-        event.preventDefault(); // Prevent form submission
-    } else {
-        alert("Thank you for your message! We will get back to you soon.");
-    }
-});
+    window.Backdrop = {settings: {"basePath":"\/","pathPrefix":"","drupalCompatibility":true,"ajaxPageState":{"theme":"exceljet","theme_token":"m6hVs3j1rSuRvUlP3W_cexIX17cIwufAcxGH1lvBvm0","css":{"core\/misc\/normalize.css":1,"core\/modules\/system\/css\/system.css":1,"core\/modules\/system\/css\/system.theme.css":1,"core\/modules\/system\/css\/messages.theme.css":1,".\/libraries\/prism\/prism.css":1,"modules\/contrib\/prism\/css\/csstweak.css":1,"core\/modules\/layout\/css\/grid-flexbox.css":1,"core\/modules\/date\/css\/date.css":1,"core\/modules\/field\/css\/field.css":1,"core\/modules\/search\/search.theme.css":1,"core\/modules\/user\/css\/user.css":1,"core\/modules\/views\/css\/views.css":1,"layouts\/exceljet_twocol\/exceljet-twocol.css":1,"themes\/exceljet\/styles\/styles.css":1,"themes\/exceljet\/system.theme.css":1,"themes\/exceljet\/menu-dropdown.theme.css":1,"themes\/exceljet\/csstweak.css":1,"themes\/exceljet\/entity_pager.css":1,"themes\/exceljet\/styles\/print.css":1},"js":{"core\/misc\/jquery.js":1,"core\/misc\/jquery.once.js":1,"core\/misc\/backdrop.js":1,".\/libraries\/prism\/prism.js":1,"modules\/contrib\/prism\/js\/prism.settings.js":1,"core\/modules\/layout\/js\/grid-fallback.js":1,"modules\/custom\/exceljet_utility\/exceljet-utility-feedback.js":1,"themes\/exceljet\/scripts\/scripts.js":1,"themes\/exceljet\/scripts\/prism-additions.js":1}}}};
+    
