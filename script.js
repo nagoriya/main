@@ -1,8 +1,52 @@
-(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-TJJ2ZWBK');
+const monthYear = document.getElementById("monthYear");
+const daysContainer = document.getElementById("days");
+const prevMonth = document.getElementById("prevMonth");
+const nextMonth = document.getElementById("nextMonth");
 
-    window.Backdrop = {settings: {"basePath":"\/","pathPrefix":"","drupalCompatibility":true,"ajaxPageState":{"theme":"exceljet","theme_token":"m6hVs3j1rSuRvUlP3W_cexIX17cIwufAcxGH1lvBvm0","css":{"core\/misc\/normalize.css":1,"core\/modules\/system\/css\/system.css":1,"core\/modules\/system\/css\/system.theme.css":1,"core\/modules\/system\/css\/messages.theme.css":1,".\/libraries\/prism\/prism.css":1,"modules\/contrib\/prism\/css\/csstweak.css":1,"core\/modules\/layout\/css\/grid-flexbox.css":1,"core\/modules\/date\/css\/date.css":1,"core\/modules\/field\/css\/field.css":1,"core\/modules\/search\/search.theme.css":1,"core\/modules\/user\/css\/user.css":1,"core\/modules\/views\/css\/views.css":1,"layouts\/exceljet_twocol\/exceljet-twocol.css":1,"themes\/exceljet\/styles\/styles.css":1,"themes\/exceljet\/system.theme.css":1,"themes\/exceljet\/menu-dropdown.theme.css":1,"themes\/exceljet\/csstweak.css":1,"themes\/exceljet\/entity_pager.css":1,"themes\/exceljet\/styles\/print.css":1},"js":{"core\/misc\/jquery.js":1,"core\/misc\/jquery.once.js":1,"core\/misc\/backdrop.js":1,".\/libraries\/prism\/prism.js":1,"modules\/contrib\/prism\/js\/prism.settings.js":1,"core\/modules\/layout\/js\/grid-fallback.js":1,"modules\/custom\/exceljet_utility\/exceljet-utility-feedback.js":1,"themes\/exceljet\/scripts\/scripts.js":1,"themes\/exceljet\/scripts\/prism-additions.js":1}}}};
-    
+let currentDate = new Date();
+let currentMonth = currentDate.getMonth();
+let currentYear = currentDate.getFullYear();
+
+const months = [
+    "January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December"
+];
+
+function renderCalendar() {
+    daysContainer.innerHTML = "";
+    let firstDay = new Date(currentYear, currentMonth, 1).getDay();
+    let lastDate = new Date(currentYear, currentMonth + 1, 0).getDate();
+
+    monthYear.innerText = `${months[currentMonth]} ${currentYear}`;
+
+    for (let i = 0; i < firstDay; i++) {
+        let emptyDiv = document.createElement("div");
+        daysContainer.appendChild(emptyDiv);
+    }
+
+    for (let day = 1; day <= lastDate; day++) {
+        let dayDiv = document.createElement("div");
+        dayDiv.innerText = day;
+        daysContainer.appendChild(dayDiv);
+    }
+}
+
+prevMonth.addEventListener("click", () => {
+    currentMonth--;
+    if (currentMonth < 0) {
+        currentMonth = 11;
+        currentYear--;
+    }
+    renderCalendar();
+});
+
+nextMonth.addEventListener("click", () => {
+    currentMonth++;
+    if (currentMonth > 11) {
+        currentMonth = 0;
+        currentYear++;
+    }
+    renderCalendar();
+});
+
+renderCalendar();
