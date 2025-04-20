@@ -4,8 +4,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dynamic Calendar</title>
-    <link rel="stylesheet" href="style.css">
 </head>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.calendar {
+    width: 320px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 5px 10px;
+    border: none;
+    background-color: #3498db;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+.weekdays, .days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    text-align: center;
+}
+
+.weekdays div {
+    font-weight: bold;
+    padding: 5px;
+}
+
+.days div {
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.days div:hover {
+    background-color: #ddd;
+}
+
+</style>
 <body>
 
     <div class="calendar">
@@ -20,6 +82,60 @@
         <div class="days" id="days"></div>
     </div>
 
-    <script src="script.js"></script>
+    <script>
+        const monthYear = document.getElementById("monthYear");
+const daysContainer = document.getElementById("days");
+const prevMonth = document.getElementById("prevMonth");
+const nextMonth = document.getElementById("nextMonth");
+
+let currentDate = new Date();
+let currentMonth = currentDate.getMonth();
+let currentYear = currentDate.getFullYear();
+
+const months = [
+    "January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December"
+];
+
+function renderCalendar() {
+    daysContainer.innerHTML = "";
+    let firstDay = new Date(currentYear, currentMonth, 1).getDay();
+    let lastDate = new Date(currentYear, currentMonth + 1, 0).getDate();
+
+    monthYear.innerText = `${months[currentMonth]} ${currentYear}`;
+
+    for (let i = 0; i < firstDay; i++) {
+        let emptyDiv = document.createElement("div");
+        daysContainer.appendChild(emptyDiv);
+    }
+
+    for (let day = 1; day <= lastDate; day++) {
+        let dayDiv = document.createElement("div");
+        dayDiv.innerText = day;
+        daysContainer.appendChild(dayDiv);
+    }
+}
+
+prevMonth.addEventListener("click", () => {
+    currentMonth--;
+    if (currentMonth < 0) {
+        currentMonth = 11;
+        currentYear--;
+    }
+    renderCalendar();
+});
+
+nextMonth.addEventListener("click", () => {
+    currentMonth++;
+    if (currentMonth > 11) {
+        currentMonth = 0;
+        currentYear++;
+    }
+    renderCalendar();
+});
+
+renderCalendar();
+
+    </script>
 </body>
 </html>
