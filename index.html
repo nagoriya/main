@@ -1,144 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculator</title>
-    <link rel="stylesheet" href="style.css">
+  <title>Simple Calculator</title>
+  <style>
+    body {
+      text-align: center;
+      margin-top: 50px;
+      font-family: Arial, sans-serif;
+    }
+    input {
+      width: 50px;
+      height: 30px;
+      font-size: 18px;
+      margin: 5px;
+    }
+    button {
+      height: 40px;
+      width: 100px;
+      font-size: 16px;
+      margin: 10px;
+    }
+  </style>
 </head>
-<style>
-    * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
-
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f4f4f4;
-}
-
-.calculator {
-    background: #222;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    text-align: center;
-}
-
-#display {
-    width: 100%;
-    height: 50px;
-    font-size: 1.5rem;
-    text-align: right;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: none;
-    outline: none;
-    background: #333;
-    color: white;
-    border-radius: 5px;
-}
-
-.buttons {
-    display: grid;
-    grid-template-columns: repeat(4, 60px);
-    gap: 23px;
-}
-
-button {
-    width: 60px;
-    height: 60px;
-    font-size: 1.5rem;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    border-radius: 5px;
-    background: #444;
-    color: white;
-}
-
-button:hover {
-    background: #666;
-}
-
-.operator {
-    background: #ff9500;
-}
-
-.operator:hover {
-    background: #e08900;
-}
-
-.equal {
-    background: #34c759;
-    grid-column: span 2;
-}
-
-.equal:hover {
-    background: #2aaa4a;
-}
-
-</style>
 <body>
 
-    <div class="calculator">
-        <input type="text" id="display" disabled>
-        <div class="buttons">
-            <button class="operator" onclick="clearDisplay()">C</button>
-            <button class="operator" onclick="appendValue('/')">/</button>
-            <button class="operator" onclick="appendValue('*')">*</button>
-            <button class="operator" onclick="deleteLast()">⌫</button>
-            
-            <button onclick="appendValue('7')">7</button>
-            <button onclick="appendValue('8')">8</button>
-            <button onclick="appendValue('9')">9</button>
-            <button class="operator" onclick="appendValue('-')">-</button>
-            
-            <button onclick="appendValue('4')">4</button>
-            <button onclick="appendValue('5')">5</button>
-            <button onclick="appendValue('6')">6</button>
-            <button class="operator" onclick="appendValue('+')">+</button>
+  <h2>Simple Calculator</h2>
 
-            <button onclick="appendValue('1')">1</button>
-            <button onclick="appendValue('2')">2</button>
-            <button onclick="appendValue('3')">3</button>
-            <button class="operator" onclick="appendValue('%')">%</button>
-            <button class="equal" onclick="calculate()">=</button>
+  <input type="number" id="num1" placeholder="Number 1">
+  <input type="number" id="num2" placeholder="Number 2"><br>
 
-            <button onclick="appendValue('0')">0</button>
-            <button onclick="appendValue('.')">.</button>
-        </div>
-    </div>
+  <button onclick="add()">Add (+)</button>
+  <button onclick="subtract()">Subtract (-)</button><br>
+  <button onclick="multiply()">Multiply (×)</button>
+  <button onclick="divide()">Divide (÷)</button>
 
-    <script>
-        let display = document.getElementById("display");
+  <h3 id="result">Result: </h3>
 
-        function appendValue(value) {
-            display.value += value;
-        }
+  <script src="calculator.js"></script>
 
-        function clearDisplay() {
-            display.value = "";
-        }
-
-        function deleteLast() {
-            display.value = display.value.slice(0, -1);
-        }
-
-        function calculate() {
-            try {
-                display.value = eval(display.value);
-            } catch (error) {
-                display.value = "Error";
-            }
-        }
-
-    </script>
-    
 </body>
 </html>
