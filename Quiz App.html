@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Quiz App</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+    }
+    #quiz-box {
+      background-color: #fff;
+      padding: 30px;
+      margin: 50px auto;
+      width: 300px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #888;
+    }
+    h2 {
+      margin-bottom: 20px;
+    }
+    button {
+      display: block;
+      margin: 10px auto;
+      padding: 10px;
+      width: 200px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      background-color: #4CAF50;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="quiz-box">
+    <h2 id="question">Question Text</h2>
+    <button onclick="checkAnswer(0)" id="btn0">Option 1</button>
+    <button onclick="checkAnswer(1)" id="btn1">Option 2</button>
+    <button onclick="checkAnswer(2)" id="btn2">Option 3</button>
+    <button onclick="checkAnswer(3)" id="btn3">Option 4</button>
+    <h3 id="score">Score: 0</h3>
+  </div>
+
+  <script src="quiz.js"></script>
+
+</body>
+</html>
