@@ -1,60 +1,22 @@
 body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f4f4f4;
+  background-color: #222;
+  color: white;
+  text-align: center;
+  font-family: sans-serif;
 }
 
-.calendar {
-    width: 320px;
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: center;
+.container {
+  margin-top: 50px;
 }
 
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px;
+input, button {
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
 }
 
 button {
-    padding: 5px 10px;
-    border: none;
-    background-color: #3498db;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-button:hover {
-    background-color: #2980b9;
-}
-
-.weekdays, .days {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    gap: 5px;
-    text-align: center;
-}
-
-.weekdays div {
-    font-weight: bold;
-    padding: 5px;
-}
-
-.days div {
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.days div:hover {
-    background-color: #ddd;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
 }

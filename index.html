@@ -1,42 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Simple Calculator</title>
-  <style>
-    body {
-      text-align: center;
-      margin-top: 50px;
-      font-family: Arial, sans-serif;
-    }
-    input {
-      width: 50px;
-      height: 30px;
-      font-size: 18px;
-      margin: 5px;
-    }
-    button {
-      height: 40px;
-      width: 100px;
-      font-size: 16px;
-      margin: 10px;
-    }
-  </style>
+  <title>Weather App</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <h2>Simple Calculator</h2>
+  <div class="container">
+    <h2>🌦️ Weather App</h2>
+    <input type="text" id="cityInput" placeholder="Enter city name">
+    <button onclick="getWeather()">Get Weather</button>
+    <div id="result"></div>
+  </div>
 
-  <input type="number" id="num1" placeholder="Number 1">
-  <input type="number" id="num2" placeholder="Number 2"><br>
-
-  <button onclick="add()">Add (+)</button>
-  <button onclick="subtract()">Subtract (-)</button><br>
-  <button onclick="multiply()">Multiply (×)</button>
-  <button onclick="divide()">Divide (÷)</button>
-
-  <h3 id="result">Result: </h3>
-
-  <script src="calculator.js"></script>
-
+  <script src="script.js"></script>
 </body>
 </html>
